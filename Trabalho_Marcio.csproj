@@ -49,9 +49,11 @@
   <ItemGroup>
     <Compile Include="..\..\Bissecção.cs">
       <SubType>Form</SubType>
+      <Link>Forms\Bissecção.cs</Link>
     </Compile>
     <Compile Include="..\..\Bissecção.Designer.cs">
       <DependentUpon>Bissecção.cs</DependentUpon>
+      <Link>Forms\Bissecção.Designer.cs</Link>
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="DadosCompartilhados.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="..\..\Bissecção.resx">
       <DependentUpon>Bissecção.cs</DependentUpon>
+      <Link>Forms\Bissecção.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Ajuda2.resx">
       <DependentUpon>Ajuda2.cs</DependentUpon>

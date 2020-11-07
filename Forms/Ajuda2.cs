@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Trabalho_Marcio
 {
     public partial class Ajuda2 : Form
@@ -275,6 +276,27 @@ namespace Trabalho_Marcio
                 slide8.Visible = false;
                 slide1.Visible = false;
             }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process pStart = new System.Diagnostics.Process();
+            pStart.StartInfo = new System.Diagnostics.ProcessStartInfo(@"https://docs.google.com/document/d/1YiZfNUpdTs-ymK8DQK03kVKbvGBo-cbHhDRKlzN-lHU/edit");
+            pStart.Start();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+        }
+
+        private void Ajuda2_Load(object sender, EventArgs e)
+        {
+             
         }
 
     }
