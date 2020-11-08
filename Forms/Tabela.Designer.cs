@@ -50,7 +50,7 @@
             this.TabelaBisseccao.Location = new System.Drawing.Point(12, 73);
             this.TabelaBisseccao.Name = "TabelaBisseccao";
             this.TabelaBisseccao.ReadOnly = true;
-            this.TabelaBisseccao.Size = new System.Drawing.Size(627, 397);
+            this.TabelaBisseccao.Size = new System.Drawing.Size(835, 397);
             this.TabelaBisseccao.TabIndex = 0;
             // 
             // toolStrip1
@@ -62,7 +62,7 @@
             this.toolStripButton4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(653, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(859, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -94,7 +94,7 @@
             // 
             this.cmb1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb1.FormattingEnabled = true;
-            this.cmb1.Location = new System.Drawing.Point(484, 38);
+            this.cmb1.Location = new System.Drawing.Point(692, 38);
             this.cmb1.Name = "cmb1";
             this.cmb1.Size = new System.Drawing.Size(63, 21);
             this.cmb1.TabIndex = 2;
@@ -104,7 +104,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(397, 41);
+            this.label1.Location = new System.Drawing.Point(605, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 3;
@@ -112,7 +112,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(328, 38);
+            this.textBox1.Location = new System.Drawing.Point(536, 38);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(63, 20);
             this.textBox1.TabIndex = 4;
@@ -122,7 +122,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(249, 41);
+            this.label2.Location = new System.Drawing.Point(457, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 5;
@@ -138,12 +138,11 @@
             this.label3.Size = new System.Drawing.Size(216, 39);
             this.label3.TabIndex = 6;
             this.label3.Text = "BISSECÇÃO:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnGerar
             // 
             this.btnGerar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.btnGerar.Location = new System.Drawing.Point(565, 31);
+            this.btnGerar.Location = new System.Drawing.Point(773, 31);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(74, 36);
             this.btnGerar.TabIndex = 7;
@@ -157,7 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(653, 482);
+            this.ClientSize = new System.Drawing.Size(859, 482);
             this.Controls.Add(this.btnGerar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -167,8 +166,6 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.TabelaBisseccao);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(669, 521);
-            this.MinimumSize = new System.Drawing.Size(669, 521);
             this.Name = "Tabela";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TABELA BISSECÇÃO";

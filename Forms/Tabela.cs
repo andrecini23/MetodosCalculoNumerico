@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace Trabalho_Marcio
 {
@@ -21,7 +14,7 @@ namespace Trabalho_Marcio
             InitializeComponent();
 
         }
-        
+
         /// <summary>
         /// Botão responsável para abrir o formulário refente à
         /// ajuda sobre o que é a Bissecção
@@ -66,7 +59,7 @@ namespace Trabalho_Marcio
         {
             // Indica que está carregando
             btnGerar.UseWaitCursor = true;
-            
+
             // Instância a Tabela
             Tbl = new DataTable();
 
@@ -81,7 +74,7 @@ namespace Trabalho_Marcio
             Tbl.Columns.Add("Precisao", typeof(double));
 
             // Cria uma Linha do Grid
-            DataRow Linha;
+
 
             // Contador
             int x = 1;
@@ -102,8 +95,8 @@ namespace Trabalho_Marcio
                 string b = cmb1.Text.Substring(cmb1.Text.IndexOf(";") + 1, cmb1.Text.Length - (cmb1.Text.IndexOf(";") + 1));
 
                 // Transforma as variáveis "a" e "b" em "double"
-                double aa = Double.Parse(a);
-                double bb = Double.Parse(b);
+                double aa = Double.Parse(a.Trim());
+                double bb = Double.Parse(b.Trim());
 
                 // Adiciona o valor no vetor
                 valorA[0] = aa;
@@ -113,20 +106,20 @@ namespace Trabalho_Marcio
                 //dados compartilhados
                 string formula = DadosCompartilhados.formula;
 
-                // Substitui a "," por "." parra realizar o cálculo
-                string formulaA = formula.Replace("X", a.Replace(",", "."));
-                string formulaB = formula.Replace("X", b.Replace(",", "."));
+                // Substitui a "X" por "a" e "b" parra realizar o cálculo
+                string formulaA = formula.Replace("X", TrocaVirgula(a));
+                string formulaB = formula.Replace("X", TrocaVirgula(b));
 
                 // Define qual valor real das funções é maior 
-                if ((Convert.ToDouble(EvalCSCode.Eval(formulaA))) > (Convert.ToDouble(EvalCSCode.Eval(formulaB))))
+                if (UsoEval(formulaA) > UsoEval(formulaB))
                 {
-                    funcaoDeA[0] = Convert.ToDouble(EvalCSCode.Eval(formulaA));
-                    funcaoDeB[0] = Convert.ToDouble(EvalCSCode.Eval(formulaB));
+                    funcaoDeA[0] = UsoEval(formulaA);
+                    funcaoDeB[0] = UsoEval(formulaB);
                 }
                 else
                 {
-                    funcaoDeA[0] = Convert.ToDouble(EvalCSCode.Eval(formulaB));
-                    funcaoDeB[0] = Convert.ToDouble(EvalCSCode.Eval(formulaA));
+                    funcaoDeA[0] = UsoEval(formulaB);
+                    funcaoDeB[0] = UsoEval(formulaA);
                     double aux = valorB[0];
                     valorB[0] = valorA[0];
                     valorA[0] = aux;
@@ -137,13 +130,13 @@ namespace Trabalho_Marcio
 
                 // Lógica para substituir a "," por "."
                 string Xk = valorXk[0].ToString();
-                Xk = Xk.Replace(",", ".");
+                Xk = TrocaVirgula(Xk);
 
                 // Substitui os o "X", por "Xk" para utilização do Eval
                 string formulaXk = formula.Replace("X", Xk);
 
                 // Calcula a função de F(Xk) 
-                funcaoDeXk[0] = Convert.ToDouble(EvalCSCode.Eval(formulaXk));
+                funcaoDeXk[0] = UsoEval(formulaXk);
                 rodadas[0] = 0;
 
                 // Laço para as rodadas
@@ -162,34 +155,23 @@ namespace Trabalho_Marcio
                     //definida para poder continuar o laço
                     if (precisao[x - 1] < E)
                     {
-                        // Cria uma nova linha
-                        Linha = Tbl.NewRow();
-
-                        //Define o que vai em cada celula da linha
-                        Linha[0] = Math.Round(rodadas[x - 1], 7);
-                        Linha["a"] = Math.Round(valorA[x - 1], 7);
-                        Linha["f(a)"] = Math.Round(funcaoDeA[x - 1], 7);
-                        Linha["b"] = Math.Round(valorB[x - 1], 7);
-                        Linha["f(b)"] = Math.Round(funcaoDeB[x - 1], 7);
-                        Linha["Xk"] = Math.Round(valorXk[x - 1], 7);
-                        Linha["f(Xk)"] = Math.Round(funcaoDeXk[x - 1], 7);
-                        Linha["Precisao"] = Math.Round(precisao[x - 1], 7);
-
-                        // Adiciona a linha na Tabela de dados
-                        Tbl.Rows.Add(Linha);
+                        // Método que retorna as linhas que serão
+                        //adicionadas a tabela e depois no Grid
+                        Linhas(rodadas, valorA, funcaoDeA, valorB, funcaoDeB, valorXk, funcaoDeXk, precisao, x);
 
                         // Termina o laço
                         break;
                     }
 
-                    // redefine o tamanho do array para realizar mais uma rodada
+                    // redefine o tamanho do array para realizar mais uma rodada                    
+                    // RedefineTamanhoVetor(rodadas, valorA, funcaoDeA, valorB, funcaoDeB, valorXk, funcaoDeXk, precisao, x);
+                    Array.Resize(ref rodadas, x + 1);
                     Array.Resize(ref valorA, x + 1);
-                    Array.Resize(ref valorB, x + 1);
                     Array.Resize(ref funcaoDeA, x + 1);
+                    Array.Resize(ref valorB, x + 1);
                     Array.Resize(ref funcaoDeB, x + 1);
                     Array.Resize(ref valorXk, x + 1);
                     Array.Resize(ref funcaoDeXk, x + 1);
-                    Array.Resize(ref rodadas, x + 1);
                     Array.Resize(ref precisao, x + 1);
 
                     // Verificações par ver se o sinal da função de Xk mudou
@@ -210,9 +192,9 @@ namespace Trabalho_Marcio
 
                     // Substituição da "," por "."
                     a = valorA[x].ToString();
-                    a = a.Replace(",", ".");
+                    a = TrocaVirgula(a);
                     b = valorB[x].ToString();
-                    b = b.Replace(",", ".");
+                    b = TrocaVirgula(b);
 
                     // Conversão de "string" patra "double"
                     aa = Double.Parse(a);
@@ -224,38 +206,24 @@ namespace Trabalho_Marcio
                     formulaB = formula.Replace("X", b);
 
                     // Cálculos das funções de "F(a)" e "F(b)"
-                    funcaoDeA[x] = Convert.ToDouble(EvalCSCode.Eval(formulaA));
-                    funcaoDeB[x] = Convert.ToDouble(EvalCSCode.Eval(formulaB));
+                    funcaoDeA[x] = UsoEval(formulaA);
+                    funcaoDeB[x] = UsoEval(formulaB);
 
                     // Definição do valor de "F(X)"
                     valorXk[x] = (valorA[x] + valorB[x]) / 2;
                     Xk = valorXk[x].ToString();
-                    Xk = Xk.Replace(",", ".");
+                    Xk = TrocaVirgula(Xk);
 
                     // Substitui na fórmula "X" pelo valor de "Xk"
                     formulaXk = formula.Replace("X", Xk);
 
                     // Utilização do eval para calcular o "Xk"
-                    funcaoDeXk[x] = Convert.ToDouble(EvalCSCode.Eval(formulaXk));
+                    funcaoDeXk[x] = UsoEval(formulaXk);
 
                     // Contador do número de rodadas
                     rodadas[x] = x;
 
-                    // Criação de uma nova linha
-                    Linha = Tbl.NewRow();
-
-                    // Definição das células da linha criada
-                    Linha[0] = Math.Round(rodadas[x - 1], 7);
-                    Linha["a"] = Math.Round(valorA[x - 1], 7);
-                    Linha["f(a)"] = Math.Round(funcaoDeA[x - 1], 7);
-                    Linha["b"] = Math.Round(valorB[x - 1], 7);
-                    Linha["f(b)"] = Math.Round(funcaoDeB[x - 1], 7);
-                    Linha["Xk"] = Math.Round(valorXk[x - 1], 7);
-                    Linha["f(Xk)"] = Math.Round(funcaoDeXk[x - 1], 7);
-                    Linha["Precisao"] = Math.Round(precisao[x - 1], 7);
-
-                    // Adiciona a linha na Tabela de dados
-                    Tbl.Rows.Add(Linha);
+                    Linhas(rodadas, valorA, funcaoDeA, valorB, funcaoDeB, valorXk, funcaoDeXk, precisao, x);
                 }
 
                 // Adiciona a tabela no Grid
@@ -292,9 +260,75 @@ namespace Trabalho_Marcio
             tela.ShowDialog();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+       /// <summary>
+       /// Método para trocar a "," de um número em string
+       /// por "." para que o cálculo seja possível
+       /// </summary>
+       /// <param name="entrada"></param>
+       /// <returns String com "."></returns>
+        public string TrocaVirgula(string entrada)
         {
-
+            string saida = entrada.Replace(",", ".");
+            return saida;
         }
+
+        // Ainda não está funcionando
+        public void RedefineTamanhoVetor(double[] a, double[] b, double[] c, double[] d, double[] e, double[] f, double[] g, double[] h, int x)
+        {
+            Array.Resize(ref a, x + 1);
+            Array.Resize(ref b, x + 1);
+            Array.Resize(ref c, x + 1);
+            Array.Resize(ref d, x + 1);
+            Array.Resize(ref e, x + 1);
+            Array.Resize(ref f, x + 1);
+            Array.Resize(ref g, x + 1);
+            Array.Resize(ref h, x + 1);
+        }
+
+        /// <summary>
+        /// Método para chamar a classe eval e transformar
+        /// a função (em string) em um valor em double
+        /// </summary>
+        /// <param name="entrada"></param>
+        /// <returns valor em double></returns>
+        public double UsoEval(string entrada)
+        {
+            double saida = Convert.ToDouble(EvalCSCode.Eval(entrada));
+            return saida;
+        }
+
+        /// <summary>
+        /// Cria e coloca as Linhas no Grig
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <param name="d"></param>
+        /// <param name="e"></param>
+        /// <param name="f"></param>
+        /// <param name="g"></param>
+        /// <param name="h"></param>
+        /// <param name="x"></param>
+        public void Linhas(double[] a, double[] b, double[] c, double[] d, double[] e, double[] f, double[] g, double[] h, int x)
+        {
+            DataRow Linha;
+
+            // Cria uma nova linha
+            Linha = Tbl.NewRow();
+
+            //Define o que vai em cada celula da linha
+            Linha[0] = Math.Round(a[x - 1], 7);
+            Linha["a"] = Math.Round(b[x - 1], 7);
+            Linha["f(a)"] = Math.Round(c[x - 1], 7);
+            Linha["b"] = Math.Round(d[x - 1], 7);
+            Linha["f(b)"] = Math.Round(e[x - 1], 7);
+            Linha["Xk"] = Math.Round(f[x - 1], 7);
+            Linha["f(Xk)"] = Math.Round(g[x - 1], 7);
+            Linha["Precisao"] = Math.Round(h[x - 1], 7);
+
+            // Adiciona a linha na Tabela de dados
+            Tbl.Rows.Add(Linha);
+        }
+
     }
 }

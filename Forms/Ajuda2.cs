@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
 namespace Trabalho_Marcio
 {
     public partial class Ajuda2 : Form
@@ -25,6 +26,7 @@ namespace Trabalho_Marcio
             slide7.Visible = false;
             slide8.Visible = false;
             slide9.Visible = false;
+            button1.Enabled = false;
         }
         public int contador = 0;
 
@@ -292,11 +294,6 @@ namespace Trabalho_Marcio
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-        }
-
-        private void Ajuda2_Load(object sender, EventArgs e)
-        {
-             
         }
 
     }

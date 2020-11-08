@@ -24,3 +24,4 @@ C:\Users\andre_000\Documents\$Git\Calculo_Bisseccao\obj\Debug\Trabalho_Marcio.Aj
 C:\Users\andre_000\Documents\$Git\Calculo_Bisseccao\obj\Debug\Trabalho_Marcio.Tabela.resources
 C:\Users\andre_000\Documents\$Git\Calculo_Bisseccao\obj\Debug\Trabalho_Marcio.Ajuda2.resources
 C:\Users\andre_000\Documents\$Git\Calculo_Bisseccao\obj\Debug\Trabalho_Marcio.Seguranca.resources
+C:\Users\andre_000\Documents\$Git\Calculo_Bisseccao\obj\Debug\Trabalho_Marcio.Tutorial.resources
