@@ -43,7 +43,7 @@ namespace Trabalho_Marcio
             {
                 MessageBox.Show("Bem Vindo ao nosso Trabalho!");
 
-                Form1 tela = new Form1();
+                Tutorial tela = new Tutorial();
                 this.Hide();
                 tela.ShowDialog();
             }

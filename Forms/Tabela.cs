@@ -164,15 +164,15 @@ namespace Trabalho_Marcio
                     }
 
                     // redefine o tamanho do array para realizar mais uma rodada                    
-                    // RedefineTamanhoVetor(rodadas, valorA, funcaoDeA, valorB, funcaoDeB, valorXk, funcaoDeXk, precisao, x);
-                    Array.Resize(ref rodadas, x + 1);
+                    RedefineTamanhoVetor(ref rodadas, ref valorA, ref funcaoDeA, ref valorB, ref funcaoDeB, ref valorXk, ref funcaoDeXk, ref precisao, x);
+                    /*Array.Resize(ref rodadas, x + 1);
                     Array.Resize(ref valorA, x + 1);
                     Array.Resize(ref funcaoDeA, x + 1);
                     Array.Resize(ref valorB, x + 1);
                     Array.Resize(ref funcaoDeB, x + 1);
                     Array.Resize(ref valorXk, x + 1);
                     Array.Resize(ref funcaoDeXk, x + 1);
-                    Array.Resize(ref precisao, x + 1);
+                    Array.Resize(ref precisao, x + 1);*/
 
                     // Verificações par ver se o sinal da função de Xk mudou
                     if (funcaoDeXk[x - 1] > 0)
@@ -273,7 +273,7 @@ namespace Trabalho_Marcio
         }
 
         // Ainda não está funcionando
-        public void RedefineTamanhoVetor(double[] a, double[] b, double[] c, double[] d, double[] e, double[] f, double[] g, double[] h, int x)
+        public void RedefineTamanhoVetor(ref double[] a, ref double[] b, ref double[] c, ref double[] d, ref double[] e, ref double[] f, ref double[] g, ref double[] h, int x)
         {
             Array.Resize(ref a, x + 1);
             Array.Resize(ref b, x + 1);

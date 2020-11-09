@@ -506,7 +506,12 @@ namespace Trabalho_Marcio
         /// <param name="e"></param>
         private void BtnDel_Click(object sender, EventArgs e)
         {
+            if (Display.Text != "")
             Display.Text = Display.Text.Remove(Display.Text.Length - 1);
+            else
+            {
+                BtnDel.Enabled = false;
+            }
         }
 
         #endregion
@@ -869,7 +874,8 @@ namespace Trabalho_Marcio
                 double E = Double.Parse(comboBox2.Text);
                 label7.Visible = true;
 
-                double divisorA = 0, divisorB = 0, a = 0, b = 0;
+                // double divisorA = 0, divisorB = 0;
+                double a = 0, b = 0;
 
                 //Identifica se o número tem vírgula no número "a"
                 if (textBox3.Text.IndexOf(',') != -1) 
@@ -951,10 +957,19 @@ namespace Trabalho_Marcio
                     BtnTabela.Enabled = true;
 
                     // Adiciona os valores da primeira Raíz encontrada nas
-                    //textBox para facilitar o novo calculo do Bolzano
-                    string[] valores = Raizes[0].Split(';');
-                    textBox3.Text = valores[1].Trim();
-                    textBox4.Text = valores[0].Trim();
+                    //textBox para facilitar o novo calculo do Bolzano.
+                    // Se não houver raíz no intervalo selecionado, entrará
+                    //no controle de exceção
+                    try
+                    {
+                        string[] valores = Raizes[0].Split(';');
+                        textBox3.Text = valores[1].Trim();
+                        textBox4.Text = valores[0].Trim();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Não foi possível encontrar raízes no intervalo selecionado. Tente outro!", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    }
                 }
             }
             catch
@@ -998,11 +1013,18 @@ namespace Trabalho_Marcio
         /// <param name="e"></param>
         private void BtnTabela_Click(object sender, EventArgs e)
         {
-            Tabela tabela = new Tabela();
-            string[] Raizes1 = Raizes.ToArray();
-            DadosCompartilhados.raizes = Raizes1;
-            Hide();
-            tabela.ShowDialog();
+            if (comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Escolha uma Raíz", "DADOS INCOMPLETOS!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+                Tabela tabela = new Tabela();
+                string[] Raizes1 = Raizes.ToArray();
+                DadosCompartilhados.raizes = Raizes1;
+                Hide();
+                tabela.ShowDialog();
+            
         }
 
         /// <summary>

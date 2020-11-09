@@ -199,5 +199,55 @@ namespace Trabalho_Marcio.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2020_11_09_at_16_02_40 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2020-11-09 at 16.02.40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2020_11_09_at_16_02_40__1_ {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2020-11-09 at 16.02.40 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2020_11_09_at_16_02_40__2_ {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2020-11-09 at 16.02.40 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2020_11_09_at_16_02_41 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2020-11-09 at 16.02.41", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2020_11_09_at_16_02_41__1_ {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2020-11-09 at 16.02.41 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
