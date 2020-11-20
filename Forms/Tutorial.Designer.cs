@@ -54,10 +54,9 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(75, 3);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(56, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(57, 46);
+            this.button1.Size = new System.Drawing.Size(43, 37);
             this.button1.TabIndex = 0;
             this.button1.Text = "<<";
             this.button1.UseVisualStyleBackColor = true;
@@ -67,10 +66,9 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(272, 2);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(204, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(57, 46);
+            this.button2.Size = new System.Drawing.Size(43, 37);
             this.button2.TabIndex = 1;
             this.button2.Text = ">>";
             this.button2.UseVisualStyleBackColor = true;
@@ -82,10 +80,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(471, 10);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(353, 8);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 32);
+            this.button3.Size = new System.Drawing.Size(80, 26);
             this.button3.TabIndex = 2;
             this.button3.Text = "Pular";
             this.button3.UseVisualStyleBackColor = true;
@@ -94,62 +91,62 @@
             // rb1
             // 
             this.rb1.AutoSize = true;
+            this.rb1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rb1.Enabled = false;
-            this.rb1.Location = new System.Drawing.Point(140, 18);
-            this.rb1.Margin = new System.Windows.Forms.Padding(4);
+            this.rb1.Location = new System.Drawing.Point(105, 15);
             this.rb1.Name = "rb1";
-            this.rb1.Size = new System.Drawing.Size(17, 16);
+            this.rb1.Size = new System.Drawing.Size(14, 13);
             this.rb1.TabIndex = 4;
             this.rb1.TabStop = true;
-            this.rb1.UseVisualStyleBackColor = true;
+            this.rb1.UseVisualStyleBackColor = false;
             // 
             // rb4
             // 
             this.rb4.AutoSize = true;
+            this.rb4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rb4.Enabled = false;
-            this.rb4.Location = new System.Drawing.Point(220, 18);
-            this.rb4.Margin = new System.Windows.Forms.Padding(4);
+            this.rb4.Location = new System.Drawing.Point(165, 15);
             this.rb4.Name = "rb4";
-            this.rb4.Size = new System.Drawing.Size(17, 16);
+            this.rb4.Size = new System.Drawing.Size(14, 13);
             this.rb4.TabIndex = 5;
             this.rb4.TabStop = true;
-            this.rb4.UseVisualStyleBackColor = true;
+            this.rb4.UseVisualStyleBackColor = false;
             // 
             // rb3
             // 
             this.rb3.AutoSize = true;
+            this.rb3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rb3.Enabled = false;
-            this.rb3.Location = new System.Drawing.Point(193, 18);
-            this.rb3.Margin = new System.Windows.Forms.Padding(4);
+            this.rb3.Location = new System.Drawing.Point(145, 15);
             this.rb3.Name = "rb3";
-            this.rb3.Size = new System.Drawing.Size(17, 16);
+            this.rb3.Size = new System.Drawing.Size(14, 13);
             this.rb3.TabIndex = 6;
             this.rb3.TabStop = true;
-            this.rb3.UseVisualStyleBackColor = true;
+            this.rb3.UseVisualStyleBackColor = false;
             // 
             // rb2
             // 
             this.rb2.AutoSize = true;
+            this.rb2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rb2.Enabled = false;
-            this.rb2.Location = new System.Drawing.Point(167, 18);
-            this.rb2.Margin = new System.Windows.Forms.Padding(4);
+            this.rb2.Location = new System.Drawing.Point(125, 15);
             this.rb2.Name = "rb2";
-            this.rb2.Size = new System.Drawing.Size(17, 16);
+            this.rb2.Size = new System.Drawing.Size(14, 13);
             this.rb2.TabIndex = 7;
             this.rb2.TabStop = true;
-            this.rb2.UseVisualStyleBackColor = true;
+            this.rb2.UseVisualStyleBackColor = false;
             // 
             // rb5
             // 
             this.rb5.AutoSize = true;
+            this.rb5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rb5.Enabled = false;
-            this.rb5.Location = new System.Drawing.Point(247, 18);
-            this.rb5.Margin = new System.Windows.Forms.Padding(4);
+            this.rb5.Location = new System.Drawing.Point(185, 15);
             this.rb5.Name = "rb5";
-            this.rb5.Size = new System.Drawing.Size(17, 16);
+            this.rb5.Size = new System.Drawing.Size(14, 13);
             this.rb5.TabIndex = 8;
             this.rb5.TabStop = true;
-            this.rb5.UseVisualStyleBackColor = true;
+            this.rb5.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -162,18 +159,19 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(1, 447);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(-8, 371);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(768, 56);
+            this.panel1.Size = new System.Drawing.Size(593, 46);
             this.panel1.TabIndex = 1;
             // 
             // pic5
             // 
             this.pic5.Image = global::Trabalho_Marcio.Properties.Resources.WhatsApp_Image_2020_11_09_at_16_02_41__1_;
             this.pic5.Location = new System.Drawing.Point(1, 1);
+            this.pic5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic5.Name = "pic5";
-            this.pic5.Size = new System.Drawing.Size(757, 449);
+            this.pic5.Size = new System.Drawing.Size(584, 365);
+            this.pic5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic5.TabIndex = 6;
             this.pic5.TabStop = false;
             // 
@@ -181,8 +179,10 @@
             // 
             this.pic4.Image = global::Trabalho_Marcio.Properties.Resources.WhatsApp_Image_2020_11_09_at_16_02_41;
             this.pic4.Location = new System.Drawing.Point(1, 1);
+            this.pic4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic4.Name = "pic4";
-            this.pic4.Size = new System.Drawing.Size(768, 449);
+            this.pic4.Size = new System.Drawing.Size(576, 371);
+            this.pic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic4.TabIndex = 5;
             this.pic4.TabStop = false;
             // 
@@ -190,8 +190,10 @@
             // 
             this.pic3.Image = global::Trabalho_Marcio.Properties.Resources.WhatsApp_Image_2020_11_09_at_16_02_40__2_;
             this.pic3.Location = new System.Drawing.Point(1, 1);
+            this.pic3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic3.Name = "pic3";
-            this.pic3.Size = new System.Drawing.Size(768, 449);
+            this.pic3.Size = new System.Drawing.Size(576, 365);
+            this.pic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic3.TabIndex = 4;
             this.pic3.TabStop = false;
             // 
@@ -199,30 +201,32 @@
             // 
             this.pic2.Image = global::Trabalho_Marcio.Properties.Resources.WhatsApp_Image_2020_11_09_at_16_02_40__1_;
             this.pic2.Location = new System.Drawing.Point(1, 1);
+            this.pic2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic2.Name = "pic2";
-            this.pic2.Size = new System.Drawing.Size(768, 457);
+            this.pic2.Size = new System.Drawing.Size(576, 367);
+            this.pic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic2.TabIndex = 2;
             this.pic2.TabStop = false;
             // 
             // pic1
             // 
+            this.pic1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pic1.Enabled = false;
             this.pic1.Image = global::Trabalho_Marcio.Properties.Resources.WhatsApp_Image_2020_11_09_at_16_02_40;
-            this.pic1.Location = new System.Drawing.Point(4, 1);
-            this.pic1.MaximumSize = new System.Drawing.Size(768, 449);
-            this.pic1.MinimumSize = new System.Drawing.Size(768, 449);
+            this.pic1.Location = new System.Drawing.Point(-6, 1);
+            this.pic1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(768, 449);
-            this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pic1.Size = new System.Drawing.Size(591, 371);
+            this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic1.TabIndex = 3;
             this.pic1.TabStop = false;
             // 
             // Tutorial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(770, 500);
+            this.ClientSize = new System.Drawing.Size(579, 413);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pic1);
             this.Controls.Add(this.pic5);
@@ -230,15 +234,14 @@
             this.Controls.Add(this.pic3);
             this.Controls.Add(this.pic2);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(788, 547);
+            this.MaximumSize = new System.Drawing.Size(595, 452);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(788, 547);
+            this.MinimumSize = new System.Drawing.Size(595, 452);
             this.Name = "Tutorial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TUTORIAL";
-            this.TransparencyKey = System.Drawing.Color.White;
+            this.TransparencyKey = System.Drawing.Color.Purple;
             this.Load += new System.EventHandler(this.Tutorial_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -248,7 +251,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

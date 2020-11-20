@@ -16,7 +16,7 @@ namespace Trabalho_Marcio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tutorial());
+            Application.Run(new senhaLogin());
         }
     }
 }

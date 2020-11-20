@@ -40,3 +40,18 @@ C:\Users\alexandrehpc\Documents\Métodos-Cálculo Numérico\MetodosCalculoNumeri
 C:\Users\alexandrehpc\Documents\Métodos-Cálculo Numérico\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.csproj.CoreCompileInputs.cache
 C:\Users\alexandrehpc\Documents\Métodos-Cálculo Numérico\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.exe
 C:\Users\alexandrehpc\Documents\Métodos-Cálculo Numérico\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.pdb
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\bin\Debug\Trabalho_Marcio.exe.config
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\bin\Debug\Trabalho_Marcio.exe
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\bin\Debug\Trabalho_Marcio.pdb
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.csprojAssemblyReference.cache
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.Tutorial.resources
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.senhaLogin.resources
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.Ajuda2.resources
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.Form1.resources
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.Ajuda1.resources
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.Tabela.resources
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.Properties.Resources.resources
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.csproj.GenerateResource.cache
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.csproj.CoreCompileInputs.cache
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.exe
+C:\Users\andre_000\Documents\$Git\Metodos\MetodosCalculoNumerico\obj\Debug\Trabalho_Marcio.pdb
